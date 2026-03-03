@@ -20,8 +20,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.2962962962962963,
-      "y": 0.5861111111111111,
+      "x": 0.18783068783068782,
+      "y": 0.40555555555555556,
       "uniqueID": "id-4",
       "name": "Bolt",
       "topLevel": false,
@@ -730,8 +730,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.3048941798941799,
-      "y": 0.7916666666666667,
+      "x": 0.19576719576719578,
+      "y": 0.6972222222222222,
       "uniqueID": "id-8",
       "name": "Nut",
       "topLevel": false,
@@ -760,7 +760,7 @@
             },
             {
               "name": "diameter",
-              "ioValue": 16
+              "ioValue": 18
             }
           ]
         },
@@ -781,12 +781,34 @@
               "currentEquation": "16"
             }
           ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.5437830687830688,
+          "y": 0.7111111111111111,
+          "uniqueID": "id-309",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 8,
+              "currentEquation": "8"
+            }
+          ]
         }
       ],
       "allConnectors": [
         {
+          "ap2Name": "geometry",
+          "ap1ID": "id-301",
+          "ap2ID": "id-309"
+        },
+        {
           "ap2Name": "number or geometry",
-          "ap1ID": "id-305",
+          "ap1ID": "id-309",
           "ap2ID": "id-10"
         }
       ],
@@ -794,8 +816,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.33994708994708994,
-      "y": 0.3833333333333333,
+      "x": 0.24140211640211642,
+      "y": 0.08888888888888889,
       "uniqueID": "id-12",
       "name": "Plate",
       "topLevel": false,
@@ -1816,8 +1838,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.49603174603174605,
-      "y": 0.3666666666666667,
+      "x": 0.625,
+      "y": 0.35833333333333334,
       "uniqueID": "id-160",
       "ioValues": [
         {
@@ -1827,13 +1849,21 @@
         {
           "name": "Shape 2",
           "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 4",
+          "ioValue": null
         }
       ]
     },
     {
       "atomType": "Rotate",
-      "x": 0.38756613756613756,
-      "y": 0.6333333333333333,
+      "x": 0.2943121693121693,
+      "y": 0.22777777777777777,
       "uniqueID": "id-288",
       "ioValues": [
         {
@@ -1858,8 +1888,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.47619047619047616,
-      "y": 0.7138888888888889,
+      "x": 0.3941798941798942,
+      "y": 0.38888888888888884,
       "uniqueID": "id-294",
       "ioValues": [
         {
@@ -1882,6 +1912,93 @@
           "currentEquation": "30"
         }
       ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.30886243386243384,
+      "y": 0.6055555555555555,
+      "uniqueID": "id-313",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": -37.5,
+          "currentEquation": "-75/2"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.39285714285714285,
+      "y": 0.7555555555555555,
+      "uniqueID": "id-319",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 37.5,
+          "currentEquation": "75/2"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Add-BOM-Tag",
+      "x": 0.7870370370370371,
+      "y": 0.35,
+      "uniqueID": "id-334",
+      "name": "Add BOM Tag",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Item Name",
+          "ioValue": "U Bolt",
+          "currentEquation": "U Bolt"
+        },
+        {
+          "name": "Number Needed",
+          "ioValue": 1
+        },
+        {
+          "name": "Cost (USD)",
+          "ioValue": 14.99
+        },
+        {
+          "name": "Source Link",
+          "ioValue": "https://amzn.to/3OM9QYm",
+          "currentEquation": "https://amzn.to/3OM9QYm"
+        }
+      ],
+      "BOMitem": {
+        "BOMitemName": "U Bolt",
+        "numberNeeded": 1,
+        "costUSD": 14.99,
+        "source": "https://amzn.to/3OM9QYm"
+      }
     }
   ],
   "allConnectors": [
@@ -1891,14 +2008,24 @@
       "ap2ID": "id-288"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-8",
+      "ap2ID": "id-313"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-8",
+      "ap2ID": "id-319"
+    },
+    {
       "ap2Name": "Shape 1",
       "ap1ID": "id-12",
       "ap2ID": "id-160"
     },
     {
-      "ap2Name": "number or geometry",
+      "ap2Name": "geometry",
       "ap1ID": "id-160",
-      "ap2ID": "id-2"
+      "ap2ID": "id-334"
     },
     {
       "ap2Name": "geometry",
@@ -1909,6 +2036,21 @@
       "ap2Name": "Shape 2",
       "ap1ID": "id-294",
       "ap2ID": "id-160"
+    },
+    {
+      "ap2Name": "Shape 4",
+      "ap1ID": "id-313",
+      "ap2ID": "id-160"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-319",
+      "ap2ID": "id-160"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-334",
+      "ap2ID": "id-2"
     }
   ],
   "unitsKey": "MM",
